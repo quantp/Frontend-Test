@@ -1,0 +1,28 @@
+header.header#header
+  .container
+    .header-wrapper
+      +link('Home').fe-brand
+        span The<br>Art<br>Museum
+      button(type="button", data-toggle="#menu", aria-label="Toggle Menu").fe-menu-toggler
+        span.icon.icon-menu
+      .menu#menu
+        .inner
+          .menu-header
+            button(type="button", data-toggle="#menu", aria-label="Toggle Menu").fe-menu-toggler
+              span.icon.icon.icon-close
+          .menu-item
+            +link('Shop')
+              span Shop
+              span.icon.icon-gift
+          .menu-item
+            +link('Plan Your Visit')
+              span Plan Your Visit
+              span.icon.icon-gift
+          .menu-item
+            +link('Collections')
+              span Collections
+              span.icon.icon-gift
+          .menu-item
+            +link('Events')
+              span Events
+              span.icon.icon-calendar

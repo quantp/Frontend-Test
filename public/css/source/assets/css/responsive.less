@@ -1,0 +1,75 @@
+
+// >=375
+@media only screen and (min-width : @screen-xs){ 
+
+}
+// >=576
+@media only screen and (min-width : @screen-sm){
+
+}
+// >=768
+@media only screen and (min-width : @screen-m){
+  
+}
+// >= 992
+@media only screen and (min-width : @screen-md){
+  .hidden-mobile {
+    display: block;
+  }
+  .fe-actions {
+    text-align: left;
+  }
+  .section {
+    padding-top: 10rem;
+  }
+  .fe-brand {
+    display: flex;
+    align-items: center;
+  }
+  .fe-menu-toggler {
+    display: none;
+  }
+  .menu {
+    position: static;
+    transform: translate(0, 0);
+    opacity: 1;
+    cursor: auto;
+    background: none;
+    box-shadow: none;
+    text-align: right;
+    margin-left: auto;
+    .menu-header {
+      display: none;
+    }
+    > .inner {
+      width: auto;
+      position: static;
+      background: none;
+    }
+    .menu-item {
+      display: inline-block;
+      padding-top: 0;
+      text-align: center;
+      padding: 0 2rem;
+      margin-left: auto;
+      .icon {
+        display: none;
+      }
+      a {
+        color: @orange;
+        &:hover {
+          color: @black;
+        }
+      }
+    }
+  }
+} 
+
+// >= 1024
+@media only screen and (min-width : @screen-l){  
+
+}
+// >= 1200
+@media only screen and (min-width : @screen-xl){
+
+}

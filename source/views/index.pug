@@ -1,0 +1,25 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+
+block container
+  main#main
+    figure.hero
+      +img('Hero Banner', 'images/upload/hero-banner.png')
+    section.section
+      .container
+        .row
+          .col-12.col-md-4
+            p.fe-mute-text Floor 5
+            span.fe-subtitle.text-orange April 15 - September 20
+            h1.fe-title Masters<br>Old And<br>New
+            span.fe-mute-text
+            .fe-actions
+              +link('Plan Your Visit').abutton.button-default
+                span Plan Your Visit
+          .col-md-4.hidden-mobile
+            p Velit proident eiusmod duis ipsum nisi ad officia fugiat id dolore ad. Eu esse ipsum adipisicing voluptate ad tempor tempor. Eiusmod minim aliquip tempor excepteur excepteur amet ut nostrud.
+          .col-md-4.hidden-mobile
+            p Velit proident eiusmod duis ipsum nisi ad officia fugiat id dolore ad. Eu esse ipsum adipisicing voluptate ad tempor tempor. Eiusmod minim aliquip tempor excepteur excepteur amet ut nostrud.

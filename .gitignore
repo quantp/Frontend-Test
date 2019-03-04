@@ -1,0 +1,9 @@
+node_modules
+reports
+*.sublime-project
+*.sublime-workspace
+npm-debug.log
+.cache
+.DS_Store
+._*
+Thumbs.db

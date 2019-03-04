@@ -1,0 +1,84 @@
+body {
+  font-family: @font-family__base;
+  font-size: 1.6rem;
+}
+
+a {
+  transition: color @transition_time;
+  &:hover{
+    color: @orange;
+    text-decoration: underline;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.fe-mute-text {
+  color: @gray;
+  text-transform: uppercase;
+}
+
+.text-orange {
+  color: @orange;
+}
+.hiddne-mobile {
+  display: none;
+}
+
+h1,
+.h1,
+.fe-title {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin-bottom: 3.9rem;
+}
+
+
+.fe-subtitle {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-bottom: .8rem;
+  display: block;
+}
+.abutton,
+.button {
+  height: 4.2rem;
+  line-height: 4.2rem;
+  width: 25rem;
+  box-shadow:  0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: color @transition_time, background @transition_time;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+.button-default {
+  background: @orange;
+  border: solid 1px @orange;
+  color: @white;
+  &:hover {
+    background-color: @white;
+    color: @orange;
+  }
+}
+
+.link-icon {
+  padding-left: 2.5rem;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  .icon {
+    font-size: 1.7rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.text-right {
+  text-align: right;
+}

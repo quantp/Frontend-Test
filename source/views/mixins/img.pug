@@ -1,0 +1,10 @@
+mixin img(alt, src)
+  - if (typeof(src) === 'undefined') href = 'images/transparent.png'
+  img(src=src, alt=alt)&attributes(attributes)
+
+mixin picture(alt,src)
+  - if (typeof(src) === 'undefined') href = 'images/transparent.png'
+  picture
+    source(media="(min-width: 1024px)" srcset=src.desktop)
+    source(media="(min-width: 768px)" srcset=src.tablet)
+    +img(alt, src.default)

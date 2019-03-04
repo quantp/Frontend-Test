@@ -1,0 +1,84 @@
+// Mixin
+
+// Sizing shortcuts
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+.square(@size) {
+  .size(@size, @size);
+}
+
+// Center-align a block level element
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder, @text-transform: none, @font-weight: 400) {
+  &:-moz-placeholder            { color: @color; text-transform:  @text-transform; font-weight: @font-weight;}
+  &::-moz-placeholder           { color: @color; text-transform:  @text-transform; font-weight: @font-weight;}
+  &:-ms-input-placeholder       { color: @color; text-transform:  @text-transform; font-weight: @font-weight;}
+  &::-webkit-input-placeholder  { color: @color; text-transform:  @text-transform; font-weight: @font-weight;}
+  &::placeholder  {color: @color; text-transform: @text-transform; font-weight: @font-weight;}
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Clearfix
+.clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+// Limit line
+.excerpt(@font-size: 16px, @line-height: 1.2, @lines-to-show: 3, @excerpt-bg: transparent) {
+  background: @excerpt-bg;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-height: @font-size*@line-height*@lines-to-show; /* Fallback for non-webkit */
+  font-size: @font-size;
+  line-height: @line-height;
+  -webkit-line-clamp: @lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // Fallback for non-webkit
+  @media screen and (min--moz-device-pixel-ratio:0), 
+  screen and (-ms-high-contrast: active), 
+  screen and (-ms-high-contrast: none) {
+    overflow: hidden;
+    position: relative;
+    &:before {
+      background: @excerpt-bg;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      float: right;
+      content: '\2026';
+      margin-left: -3rem;
+      width: 3rem;
+    }
+    &:after {
+      content: '';
+      background: @excerpt-bg;
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
